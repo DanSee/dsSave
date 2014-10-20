@@ -122,7 +122,7 @@ namespace dsSave
             {
                 if (selectedSaveData.Length == SAVE_SIZE)
                 {
-                    File.Copy(dsMainSave, dsMainSave + "." + getTimestamp(".dd_MMM_yyyy.hh;mm;sstt"), true);
+                    File.Copy(dsMainSave, dsMainBackupSaveDir + DEFAULT_SAVE_NAME + "." + getTimestamp(".dd_MMM_yyyy.hh;mm;sstt"), true);
                     File.Copy(selectedSave, dsMainSave, true);
                     printLabel("Loaded: " + selected, "Loaded custom");
                 }
